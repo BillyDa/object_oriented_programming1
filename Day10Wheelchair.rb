@@ -22,7 +22,7 @@ venues.each do |venue|
   end
 end
 # p venue
-#
+# changes changes
 # def venues_of_choice(venues)
 #   possibilities = []
 #   venues.each do |venue|   # venue variable gives you each of the items in the collection (each key, each value)
