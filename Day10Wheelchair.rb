@@ -10,16 +10,33 @@ venues = [
 
 ]
 
-def venues_of_choice(venues_array)
-  possibilities = []
-  venues_array.each do |venue|   # venue variable gives you each of the items in the collection (each key, each value)
-    if venue[:wheelchair_accessible] == true && venue[:capacity] > 150 && venue[:city] == "Toronto"
-      possibilities << venue
-      return possibilities
-    end
+venues.each do |venue|
+  if venue[:wheelchair_accessible] == true && venue[:capacity] >= 150 && venue[:city] == "Toronto"
+    puts "#{venue[:address]}"
+  end
 end
 
-event_venues = venues_of_choice(venues)
-
-event_venues.each do |venue|
-  puts venue[:address]
+venues.each do |venue|
+  if venue[:wheelchair_accessible] == true && venue[:capacity] >= 150 && venue[:city] == "Toronto"
+    puts "#{venue[:address]}"
+  end
+end
+# p venue
+#
+# def venues_of_choice(venues)
+#   possibilities = []
+#   venues.each do |venue|   # venue variable gives you each of the items in the collection (each key, each value)
+#     if venue[:wheelchair_accessible] == true && venue[:capacity] > 150 && venue[:city] == "Toronto"
+#       possibilities << venues
+#       return possibilities
+#     end
+# end
+# end
+#
+# event_venues = venues_of_choice(venues)
+# #
+# event_venues.each do |venue|
+#   return venues
+#   puts venue[:address]
+# end
+# p venues
